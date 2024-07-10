@@ -1,0 +1,20 @@
+### Define the base URL
+@LoginAppApi_Host = https://localhost:7138
+
+POST {{LoginAppApi_Host}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Paul Adams",
+  "email": "admin@gmail.com",
+  "password": "ad123"
+}
+###
+GET {{LoginAppApi_Host}}/api/users
+###
+GET {{LoginAppApi_Host}}/api/users/Login/admin@gmail.com/ad123
+
+###
+
+POST {{LoginAppApi_Host}}/api/users/Update/4/Paul%20Demons/Paul@gmail.com/pd321
+###
