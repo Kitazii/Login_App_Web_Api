@@ -3,7 +3,8 @@ using Android.Runtime;
 
 namespace LoginApp.Maui
 {
-    [Application]
+    //this is set for andriod
+    [Application(UsesCleartextTraffic = true)]
     public class MainApplication : MauiApplication
     {
         public MainApplication(IntPtr handle, JniHandleOwnership ownership)

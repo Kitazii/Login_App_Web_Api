@@ -10,7 +10,7 @@ namespace LoginApp.Maui.Services
             try
             {
                 var client = new HttpClient();
-                string localhostUrl = $"https://localhost:7138/api/users/Login/{email}/{password}";
+                string localhostUrl = $"http://10.0.2.2:5189/api/users/Login/{email}/{password}"; //http for andriod
                 client.BaseAddress = new Uri(localhostUrl);
                 HttpResponseMessage response = await client.GetAsync(client.BaseAddress);
                 if (response.IsSuccessStatusCode)
