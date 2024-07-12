@@ -27,8 +27,8 @@ namespace LoginApp.Maui.ViewModels
             {
                 if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password))
                 {
-                    User user = await loginService.Login(Email, Password);
-                    if (user != null)
+                    User? user = await loginService.Login(Email, Password);
+                    if (!string.IsNullOrEmpty(user.Email))
                     {
                         if (Preferences.ContainsKey(nameof(App.user)))
                         {
@@ -41,7 +41,7 @@ namespace LoginApp.Maui.ViewModels
                     }
                     else
                     {
-                        await Shell.Current.DisplayAlert("Error", "Email/Password is incorrect", "Ok");
+                        await Shell.Current.DisplayAlert("Error", "Email or Password is incorrect", "Ok");
                         return;
                     }
                 }
