@@ -5,8 +5,8 @@ POST {{LoginAppApi_Host}}/api/users
 Content-Type: application/json
 
 {
-  "name": "Paul Adams",
-  "email": "admin@gmail.com",
+  "name": "Ruby Campling",
+  "email": "Ruby@gmail.com",
   "password": "ad123"
 }
 ###

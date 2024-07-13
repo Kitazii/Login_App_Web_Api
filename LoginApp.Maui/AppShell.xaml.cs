@@ -1,4 +1,5 @@
-﻿using LoginApp.Maui.Views;
+﻿using LoginApp.Maui.ViewModels;
+using LoginApp.Maui.Views;
 
 namespace LoginApp.Maui
 {
@@ -7,6 +8,7 @@ namespace LoginApp.Maui
         public AppShell()
         {
             InitializeComponent();
+            this.BindingContext = new AppShellViewModel();
             Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));

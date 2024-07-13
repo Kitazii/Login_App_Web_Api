@@ -57,7 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\about_us.svg" />
+	  <None Remove="Resources\Images\house.svg" />
 	  <None Remove="Resources\Images\lock.png" />
+	  <None Remove="Resources\Images\support.svg" />
 	  <None Remove="Resources\Images\user.png" />
 	  <None Remove="Resources\Images\user_lock.png" />
 	</ItemGroup>
@@ -76,6 +79,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UserControls\FlyoutHeaderControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\AboutPage.xaml">

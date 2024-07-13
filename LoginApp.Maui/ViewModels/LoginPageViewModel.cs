@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using LoginApp.Maui.Models;
 using LoginApp.Maui.Services;
+using LoginApp.Maui.UserControls;
 using LoginApp.Maui.Views;
 using Newtonsoft.Json;
 
@@ -37,7 +38,8 @@ namespace LoginApp.Maui.ViewModels
                         string userDetails = JsonConvert.SerializeObject(user);
                         Preferences.Set(nameof(App.user), userDetails);
                         App.user = user;
-                        await Shell.Current.GoToAsync(nameof(HomePage));
+                        Shell.Current.FlyoutHeader = new FlyoutHeaderControl();
+                        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
                     }
                     else
                     {
