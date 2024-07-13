@@ -5,7 +5,7 @@ namespace LoginApp.Maui.Services
 {
     public class LoginService : ILoginRepository
     {
-        public async Task<User> Login(string email, string password)
+        public async Task<User?> Login(string email, string password)
         {
             try
             {
@@ -15,16 +15,16 @@ namespace LoginApp.Maui.Services
                 HttpResponseMessage response = await client.GetAsync(client.BaseAddress);
                 if (response.IsSuccessStatusCode)
                 {
-                    User? user = await response.Content.ReadFromJsonAsync<User>() ?? new();
+                    User? user = await response.Content.ReadFromJsonAsync<User>() ?? null;
                     return await Task.FromResult(user);
                 }
 
-                return new();
+                return null;
             }
             catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error", ex.Message, "Ok");
-                return new();
+                return null;
             }
         }
 

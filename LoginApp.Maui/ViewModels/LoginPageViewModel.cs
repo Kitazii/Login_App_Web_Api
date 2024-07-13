@@ -19,7 +19,7 @@ namespace LoginApp.Maui.ViewModels
         readonly ILoginRepository loginService = new LoginService();
 
         [RelayCommand]
-        public async void Signin()
+        public async Task Signin()
         {
             //to check if internet connection is active
             //if (Connectivity.Current.NetworkAccess == NetworkAccess.Internet)
@@ -29,7 +29,7 @@ namespace LoginApp.Maui.ViewModels
                 if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password))
                 {
                     User? user = await loginService.Login(Email, Password);
-                    if (!string.IsNullOrEmpty(user.Email))
+                    if (user != null)
                     {
                         if (Preferences.ContainsKey(nameof(App.user)))
                         {

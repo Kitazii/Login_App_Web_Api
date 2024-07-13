@@ -12,7 +12,7 @@ namespace LoginApp.Maui.ViewModels
     public partial class AppShellViewModel : ObservableObject
     {
         [RelayCommand]
-        public async void Logout()
+        public async Task Logout()
         {
             if (Preferences.ContainsKey(nameof(App.user)))
             {
