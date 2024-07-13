@@ -69,14 +69,16 @@
                 VerticalOptions="Center" Margin="30,0,30,0" WidthRequest="300"></Button>
 
         <!--this is if the user is new sign up text (button)-->
-        <StackLayout Margin="0,35,0,0" Orientation="Horizontal" HorizontalOptions="Center"></StackLayout>
-        <Label Text="New User?" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"
-               FontSize="Small"></Label>
-        <Button Text="Sign Up" FontSize="Small" TextColor="Green" FontAttributes="Bold" BorderWidth="0"
-                VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent"></Button>
+        <StackLayout Margin="0,35,0,0" Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="New User?" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Blue"
+                   FontSize="Small"></Label>
+            <Button Text="Sign Up" FontSize="Small" TextColor="Green" FontAttributes="Bold" BorderWidth="0"
+                    Margin="20,0,0,0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent"></Button>
+        </StackLayout>
         <!-- Bottom Border -->
-        <BoxView HeightRequest="2" Color="Green" WidthRequest="80" HorizontalOptions="Center" Margin="0,-5,0,0"
-             VerticalOptions="Start" />
+        <BoxView HeightRequest="2" Color="Green" WidthRequest="60" HorizontalOptions="Center" Margin="95,-7,0,0"
+                 VerticalOptions="Center" />
+        
     </VerticalStackLayout>
     
 </ContentPage>

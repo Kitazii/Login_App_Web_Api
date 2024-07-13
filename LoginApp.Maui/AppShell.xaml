@@ -21,7 +21,7 @@
     <!-- Sidebar -->
     <FlyoutItem Title="Home" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Home" Icon="house.svg" ContentTemplate="{DataTemplate views:HomePage}" Route="HomePage"></ShellContent>
-        <ShellContent Title="Support" Icon="support.svg" ContentTemplate="{DataTemplate views:ContactPage}" Route="ContactPage"></ShellContent>
+        <ShellContent Title="Contact" Icon="contact.svg" ContentTemplate="{DataTemplate views:ContactPage}" Route="ContactPage"></ShellContent>
         <ShellContent Title="About" Icon="about_us.svg" ContentTemplate="{DataTemplate views:AboutPage}" Route="AboutPage"></ShellContent>
     </FlyoutItem>
     
